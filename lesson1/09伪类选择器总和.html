@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>.box下的第一个p元素</p>
+        <p>.box下的第二个p元素</p>
+        <p>.box下的第三个p元素</p>
+        <p>.box下的第四个p元素</p>
+        <p>.box下的第五个p元素</p>
+        <div>
+            <span>.box下的div下的span元素</span>
+            <p>.box下的div下的第一个p元素,但处于第二个位置</p>
+            <p>.box下的div下的第二个p元素</p>
+        </div>
+        <p>.box下的第六个p元素</p>
+    </div>
+</body>
+</html>
+<style>
+    /* 选择.box后代中处于第一个位置并且是p的元素 */
+    .box p:first-child{
+        color: red;
+    }
+    /* 选择.box后代中处于最后一个位置并且是p的元素 */
+    .box p:last-child{
+        color: blue;
+    }
+    /* 选择.box后代中处于第二个位置并且是p的元素 */
+    .box p:nth-child(2){
+        color: green;
+    }
+    /* 选择.box直接子代中处于第三个位置并且是p的元素 */
+    .box>p:nth-child(3){
+        color: rgb(170, 27, 51);
+    }
+    /**
+    其中还有很多具体可以参考CSS3手册或者README.md
+    */
+</style>

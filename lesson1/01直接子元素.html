@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>选出所有.box下的所有直接子元素</span>
+    <hr>
+    <div class="box">
+        <p class="p">class为.box下的第一个p元素</p>
+        <p class="p1">class为.box下的第二个p元素</p>
+        <p class="p">class为.box下的第三个p元素</p>
+    </div>
+</body>
+</html>
+<style>
+    /* 直接子元素模式,选中满足条件的直接子元素 */
+    /* 也就是说需要满足:1.class为box的元素,2.是直接子元素,3.class为p的元素 */
+    .box>.p{
+        color: red;
+    }
+</style>

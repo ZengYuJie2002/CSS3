@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代元素模式</title>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 这个p是box的子代元素(后代元素),所以会被选中 -->
+        <p>123</p>
+        <div>
+            456
+        </div>
+        <div>
+            <!-- 这个p是box的后代元素,所以会被选中 -->
+            <p>789</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+    /* 后代元素模式,选中满足条件的后代元素 */
+    /* 也就是说需要满足:1.class为box的元素,2.是后代元素,3.class为p的元素 */
+    .box p{
+        color: blue;
+    }
+</style>

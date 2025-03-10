@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>不改变选中文字的状态</div>
+    <div class="change-text">改变选中文字的状态</div>
+</body>
+</html>
+<style>
+    /* 选中文字的状态:伪元素选择器
+        只能设置文字的颜色和背景颜色和文字阴影
+    */
+    .change-text::selection{
+        color: rgb(8, 238, 42);
+        background-color: blue;
+        text-shadow: 1px 1px 1px red;
+    }
+</style>

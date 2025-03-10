@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+</head>
+<body>
+    <span>选中设置了test属性的p元素</span>
+    <hr>
+    <div class="box">
+        <p test="test">设置了test=test的p元素</p>
+    </div>
+    <p>没有设置test属性的p元素</p>
+    <p test="test1">设置了test不等于test的p元素</p>
+    <div test="test">设置了test属性的div元素</div>
+    <p test="test">设置了test=test的p元素</p>
+</body>
+</html>
+<style>
+    /* 选中条件:test=test的p元素 */
+    p[test="test"]{
+        color: red;
+    }
+    /**
+    [test]:选中设置了所有设置了test属性的元素
+    [test~="data"]:选中设置了test属性,并且存在一个test属性值为data的元素
+    [test|="data"]:选中设置了test属性,并且存在一个test属性值为data的元素,或者test属性值为data-开头的元素
+    [test^="data"]:选中设置了test属性,并且存在一个test属性值为data的元素,或者test属性值以data开头的元素
+    [test$="data"]:选中设置了test属性,并且存在一个test属性值为data的元素,或者test属性值以data结尾的元素
+    [test*="data"]:选中设置了test属性,并且存在一个test属性值为data的元素,或者test属性值包含data的元素
+    */
+</style>

@@ -1,0 +1,23 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>box的p元素</p>
+    </div>
+</body>
+</html>
+<style>
+    /* 在div元素前面插入一个块级元素 */
+    .box::before{
+        content: "div::before";
+        color: red;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>

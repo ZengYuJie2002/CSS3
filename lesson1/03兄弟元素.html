@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟元素模式</title>
+</head>
+
+<body>
+    <div class="test">
+        <div class="box">
+            <p>.box的第一个p元素</p>
+            <p>.box的第二个p元素</p>
+            <p>.box的第三个p元素</p>
+        </div>
+        <!-- 这个div是box的下一个兄弟元素,并且是p元素,所以会被选中 -->
+        <p>.box的下一个兄弟元素p</p>
+        <!-- 这个p是box的下面第二个兄弟元素,所以不会被选中 -->
+        <p>.box的第二个兄弟元素p</p>
+    </div>
+    <hr>
+    <div class="test1">
+        <div class="box">
+            <p>.box的第一个p元素</p>
+            <p>.box的第二个p元素</p>
+            <p>.box的第三个p元素</p>
+        </div>
+        <!-- 这个div是box的下一个兄弟元素,所以不会被选中 -->
+        <div>.box的下一个兄弟元素div</div>
+        <!-- 这个p是box的下面第个兄弟元素,所以不会被选中 -->
+        <p>.box的第二个兄弟元素p</p>
+    </div>
+</body>
+
+</html>
+<style>
+    /* 选中条件:1.必须是.box的下一个兄弟元素 2.并且必须是p元素 */
+    .box+p {
+        color: red;
+    }
+</style>
