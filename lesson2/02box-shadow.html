@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="demo"></div>
+</body>
+</html>
+<style>
+    /* 设置根元素的背景颜色 */
+    :root{
+        background-color:black;
+    }
+    div{
+        margin: 30px auto;
+    }
+    .box1{
+        
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(253, 252, 252);
+        box-shadow: 250px 250px 50px 10px rgba(13, 169, 127, 0.5);/* 设置阴影:水平偏移量 垂直偏移量 模糊半径 四个方向上增加阴影大小 阴影颜色 */
+    }
+    .box2{
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(253, 252, 252);
+        box-shadow:inset 10px 10px 50px 10px rgba(29, 123, 206, 0.5);/* 设置阴影:水平偏移量 垂直偏移量 模糊半径 四个方向上增加阴影大小 阴影颜色 */
+    }
+    .box3{
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(253, 252, 252);
+        box-shadow: 0px -10px 10px 0px rgba(47, 200, 24, 0.5),10px 0px 50px 0px rgba(29, 123, 206, 0.5),inset 0px 0px 50px 10px rgba(201, 50, 58, 0.5);/* 设置阴影:水平偏移量 垂直偏移量 模糊半径 四个方向上增加阴影大小 阴影颜色 */
+    }
+    .demo{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 1px solid rgb(253, 252, 252);
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255),-20px 0px 20px 0px rgba(237, 52, 76, 0.5),20px 0px 20px 0px rgba(29, 123, 206, 0.5),inset 2px 0px 20px 0px rgba(255, 255, 255),inset 40px 0px 70px 0px rgb(196, 3, 235),inset -20px 0px 50px 10px rgba(48, 162, 232, 0.5);/* 设置阴影:水平偏移量 垂直偏移量 模糊半径 四个方向上增加阴影大小 阴影颜色 */
+        transition: all 2s linear;
+    }
+    .demo:hover{
+        transform:scale(1.2)
+    }
+</style>

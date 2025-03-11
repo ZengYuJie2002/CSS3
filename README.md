@@ -46,10 +46,10 @@ postcss+插件,Autoprefixer等,它提供一个环境,它会对我们写好的css
 -伪类选择器:
     div:hover 鼠标悬浮状态
     div:active 鼠标点击状态
-    div:focus 获取焦点状态
-    div:checked 被选中的状态
-    div:disabled 被禁用的状态
-    div:enabled 被启用的状态
+    div:focus 获取焦点状态,比如input框获取焦点,作用于表单元素
+    div:checked 被选中的状态,比如checkbox被选中,作用于表单元素
+    div:disabled 被禁用的状态,比如input框被禁用,作用于表单元素
+    div:enabled 被启用的状态,比如input框被启用,作用于表单元素
     div:first-child 第一个子元素
     div:last-child 最后一个子元素
     div:nth-child(n) 第n个子元素
@@ -62,10 +62,32 @@ postcss+插件,Autoprefixer等,它提供一个环境,它会对我们写好的css
     div:only-of-type 唯一子元素
     div:empty 没有子元素的元素
     div:not(p) 不包含p元素的元素
-    div:target 被选中的元素
+    div:target 被选中的元素,比如a标签被选中为锚点时,div:target就是被选中的div元素
     div:lang(en) 被选中的元素
     div:first-line 第一个行
     div:first-letter 第一个字母
 
 
+## boder和background
+-border:
+    border-radius:他的原理其实是在四个角上设置圆角(椭圆),圆角的垂直和水平半径就是你设置的值,然后再根据圆角进行切割得到
+        border-radius: 10px;四个值:左上,右上,右下,左下
+        border-radius: 10px 20px 30px 40px; 四个值:左上,右上,右下,左下
+        border-radius: 10px 20px 30px;三个值:左上,右上,右下
+        border-radius: 10px 20px;两个值:左上,右上
+        border-top-left-radius: 10px;左上,圆角垂直半径为10px,水平半径为10px
+        border-top-right-radius:10px 20px;右上,圆角(椭圆)垂直半径为10px,水平半径为20px
 
+    box-shadow:设置盒子的阴影,逻辑上阴影在盒子下面,阴影的模糊半径越大,阴影越模糊,颜色变得越浅
+
+        box-shadow:水平偏移量 垂直偏移量 模糊半径 四个方向上增加阴影大小 阴影颜色
+        模糊半径:基于边框两边的位置向两侧同时模糊
+        box-shadow: inset 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+        
+        
+        使用了inset表示内阴影,没有使用inset表示外阴影
+        box-shadow:inset 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+        内阴影:你可以理解为阴影在盒子里面,并且除了盒子,其他地方都是阴影
+        他的模糊半径是向盒子内模糊,所以模糊半径越大,阴影越模糊,颜色变得越浅
+
+        阴影可以设置多个,多个阴影之间用逗号分隔,每个阴影的属性都是一样的,但是每个阴影的属性可以不一样,哪个最先设置哪个就在最上面
