@@ -91,3 +91,70 @@ postcss+插件,Autoprefixer等,它提供一个环境,它会对我们写好的css
         他的模糊半径是向盒子内模糊,所以模糊半径越大,阴影越模糊,颜色变得越浅
 
         阴影可以设置多个,多个阴影之间用逗号分隔,每个阴影的属性都是一样的,但是每个阴影的属性可以不一样,哪个最先设置哪个就在最上面
+
+    border-image:可以给边框设置渐变色或者图片,但是这个属性在实际开发中用的很少,因为他的兼容性不好,所以不推荐使用
+    设置border-image属性是必须要有border-width
+        
+        border-image-source:渐变图片/图片地址   border-image-slice:渐变/图片的宽度   border-image-repeat:渐变/图片的重复方式
+
+        设置渐变:border-image: linear-gradient(to right, red, blue) 1;
+
+        设置图片:border-image: url(./img/bg.jpg) 1;
+
+        设置渐变和图片:border-image: linear-gradient(to right, red, blue) 1 url(./img/bg.jpg) 1;
+
+        设置背景图四个框的中间部分的填充方式:可取值为:stretch(拉伸),repeat(重复),round(圆角),space(空格)
+
+        可以简写为:border-image: url(./img/bg.jpg) 1 stretch;
+
+        border-image-outset:设置边框的向外的偏移量,可以设置四个值,分别是:左上,右上,右下,左下
+        
+        border-image-width:设置边框背景图片的宽度(不是边框的宽度),可以设置四个值,分别是:左上,右上,右下,左下,默认值为1,设置数值时表示边框宽度的倍数,如果设置为auto,则自动计算为slice的值加px
+
+    background:盒子的背景设置
+    
+        background-color:盒子的背景颜色
+        background-image:盒子的背景图片,使用url()引入,可以使用多张url,一般用于第一张图片加载失败时,加载第二张图片(大小很小,容易加载)
+        background-repeat:盒子的背景图片的拉伸方式
+            1. repeat（默认值）
+            - 背景图片在水平和垂直方向都重复平铺
+            - 可能会出现图片被切割的情况
+
+            2. no-repeat
+            - 背景图片不重复，只显示一次
+
+            3. repeat-x
+            - 背景图片只在水平方向（x轴）重复
+
+            4. repeat-y
+            - 背景图片只在垂直方向（y轴）重复
+
+            5. space
+            - 背景图片在两个方向重复
+            - 图片之间会有均匀的空隙
+            - 第一个和最后一个图片会贴着容器边缘
+            - 不会切割图片
+
+            6. round
+            - 背景图片在两个方向重复
+            - 会调整图片大小，使其正好填满容器
+            - 不会出现空隙
+            - 不会切割图片
+        background-size:盒子的背景图片的尺寸:值为图片的宽度,高度,百分比,cover(覆盖,可能会出现图片被切割的情况),contain(包含,可能会出现图片被拉伸/重复的情况),也可以设置为auto(自动),默认值为auto
+        background-position:盒子的背景图片的位置,值为图片的左上角位置坐标
+        background-attachment:盒子的背景图片的固定方式:值为scroll(滚动),fixed(固定)
+        background-origin:盒子的背景图片从哪里开始平铺展开:值为border-box(边框的左上角),padding-box(内边距的左上角),content-box(内容的左上角),默认值为padding-box
+        background-clip:盒子的背景图片的裁剪方式:值为border-box(边框),padding-box(内边距),content-box(内容),text(文本区域,需要配合color:transparent使用,但是在谷歌浏览器需要单独设置)
+             默认值为border-box,设置背景图片从哪里开始截断,之外的背景图片不显示,如果设置值为text,则文本内容会被融入到背景区域,当设置文字阴影text-shadow时,阴影会在上面
+
+        背景图片默认是相对于容器进行定位的而不是相对于内容,如果想要背景图片相对于内容进行定位,需要设置background-attachment,scroll(相对于容器),local(相对于内容)
+
+        背景设置渐变:
+        background-image: linear-gradient(to right, red, blue)/radial-gradient(to right, red, blue);
+        
+    text:
+        text-shadow:文字阴影
+        text-shadow:水平偏移量,垂直偏移量,阴影,颜色
+
+
+

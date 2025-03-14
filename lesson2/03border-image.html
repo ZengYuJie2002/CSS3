@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+</body>
+</html>
+<style> 
+:root{
+    background-color:#000
+}
+    .demo1{
+        margin: 30px auto;
+        width: 200px;
+        height: 200px;
+        border: 10px solid lightpink;
+        background-color: #efeaea;
+        /* 设置边框渐变 */
+        border-image: linear-gradient(to right, red, blue) 20;
+        /*
+        等效于
+        border-image-source: linear-gradient(to right, red, blue);
+        border-image-slice: 2;
+        */
+    }
+    .demo2{
+        margin: 30px auto;
+        width: 200px;
+        height: 200px;
+        border: 50px solid lightpink;
+        background-color: #efeaea;
+        border-image: url(../resource/testBorderImg.jpeg) 50 stretch;
+        border-image-outset: 20px;
+        border-image-width: 20px;
+    }
+</style>

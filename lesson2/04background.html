@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="demo"></div>
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3">曾宇杰</div>
+</body>
+</html>
+<style>
+    .demo{
+        margin: 30px auto;
+        width: 200px;
+        height: 200px;
+        /* 设置背景颜色 */
+        background-color: #000;
+    }
+    .demo1{
+        border:10px solid transparent;
+        margin: 30px auto;
+        width: 200px;
+        height: 200px;
+        background-color: #000;
+        /* 设置背景图片 */
+        background-image: url(../resource/testBorderImg.jpeg);
+        /* 设置背景图片的尺寸 */
+        background-size: 100% 100%;
+        /*设置图片的位置:值为图片的左上角位置坐标,相对于背景图片的渲染起点*/
+        background-position: 50px 10px;
+        /*设置图片重复方式:值为repeat(重复),no-repeat(不重复),repeat-x(水平重复),repeat-y(垂直重复)*/
+        background-repeat: no-repeat;
+        /*设置背景图片的渲染起点:值为border-box(边框的左上角),padding-box(内边距的左上角),content-box(内容的左上角),默认值为padding-box*/
+        background-origin: content-box;
+        /*设置背景图片的裁剪方式:值为border-box(边框),padding-box(内边距),content-box(内容),默认值为border-box,设置背景图片从哪里开始截断,之外的背景图片不显示*/
+        background-clip: border-box;
+    }
+    .demo3{
+        /* 设置文字颜色透明,使背景图片显示 */
+        color: transparent;
+        background-image: url(../resource/testBorderImg.jpeg);
+        font-size: 100px;
+        /* 设置背景图片的裁剪方式为文本区域,需要配合color:transparent使用*/
+        background-clip: text;
+
+        /* 谷歌浏览器需要单独设置 */
+        /* 设置webkit内核浏览器中的文字颜色透明,使背景图片显示 */
+        -webkit-text-fill-color: transparent;
+        /* 设置webkit内核浏览器中的文字颜色透明,使背景图片显示 */
+        -webkit-background-clip: text;
+    
+    }
+</style>
