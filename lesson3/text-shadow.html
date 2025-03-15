@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字阴影</title>
+</head>
+<body>
+    <div class="demo1">测试文本1</div>
+    <div class="demo2">测试文本2</div>
+    <div class="demo3">测试文本3</div>
+</body>
+</html>
+<style>
+    *{
+        padding:0;
+        margin:0;
+    }
+    body{
+        display: block;
+    }
+   div{
+    width: 800px;
+    /* 不换行 */
+    white-space: nowrap;
+
+    margin:30px auto;
+    color:#ddd;
+    font-size: 120px;
+    font-weight: bold;
+   }
+
+   .demo1{
+    /*  阴影水平偏移量 阴影垂直偏移量 阴影模糊度 阴影颜色 */
+    text-shadow: 1px 0px 5px rgb(4, 4, 4),0px 1px 5px rgb(242, 238, 238);
+   }        
+   .demo2{
+    text-shadow: 1px 0px 5px rgb(252, 251, 251),0px 1px 5px rgb(11, 10, 10);
+   }
+   .demo3{
+    background-image: url(../resource/testBorderImg.jpeg);
+    background-size: 100% 100%;
+    /* 背景裁剪:值为text时,将文本内容变成背景,文本阴影此时在背景/文本上 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 10px 10px 5px rgb(36, 126, 190);
+    background-position:-300px;
+    opacity: 0;
+    transition: all 2s linear;
+    
+   }
+   .demo3:hover{
+    opacity: 1;
+    background-position:0 0;
+    /* 设置文字描边:谷歌浏览器 */
+    -webkit-text-stroke: 1px rgb(36, 126, 190);
+   }
+</style>

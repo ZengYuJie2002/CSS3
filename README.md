@@ -153,8 +153,40 @@ postcss+插件,Autoprefixer等,它提供一个环境,它会对我们写好的css
         background-image: linear-gradient(to right, red, blue)/radial-gradient(to right, red, blue);
         
     text:
-        text-shadow:文字阴影
-        text-shadow:水平偏移量,垂直偏移量,阴影,颜色
+        text-shadow:文字阴影,可以有多个值,用逗号分隔,每个值的含义如下:
+            text-shadow:水平偏移量,垂直偏移量,阴影,颜色
+
+        white-space:设置文本的空白处理方式,值为normal(默认值,正常),nowrap(不换行),pre(保留空白),pre-wrap(保留空白,但是会自动换行),pre-line(保留空白,但是会自动换行,但是不会保留空白)
+
+        word-break:设置文本的换行方式,值为normal(默认值,正常),break-all(允许在单词内换行),keep-all(不允许在单词内换行),break-word(允许在单词内换行,但是会自动换行)
+
+        word-wrap:设置文本的换行方式,值为normal(默认值,正常),break-word(允许在单词内换行,但是会自动换行),keep-all(不允许在单词内换行)
+
+        text-overflow:设置文本的溢出处理方式,值为clip(裁剪),ellipsis(省略号),string(字符串),默认值为clip
+
+        text-align:设置文本的对齐方式,值为left(左对齐),right(右对齐),center(居中对齐),justify(两端对齐),默认值为left,start(开始对齐),end(结束对齐),justify-all(两端对齐,但是会自动换行)
+
+        text-align-last:设置文本的最后一行的对齐方式,值为left(左对齐),right(右对齐),center(居中对齐),justify(两端对齐),默认值为auto,auto(自动),start(开始对齐),end(结束对齐),justify(两端对齐,但是会自动换行)
+
+        word-spacing:设置文本的单词间距,值为normal(默认值,正常),number(数字,表示单词之间的距离),默认值为normal
+
+        vertical-align:设置文本的垂直对齐方式,值为baseline(基线对齐),sub(下标对齐),super(上标对齐),top(顶部对齐),middle(中间对齐),bottom(底部对齐),text-top(文本顶部对齐),text-bottom(文本底部对齐),默认值为baseline
+
+        line-height:设置文本的行高,值为normal(默认值,正常),number(数字,表示行高),默认值为normal
+
+    多列(Multi-column)
+        column-count:设置文本的列数,值为number(数字,表示列数),默认值为auto,浏览器会自适应
+        column-width:设置文本的列宽,值为number(数字,表示列宽),默认值为auto,一般设置为auto
+        column-gap:设置文本的列间距,值为number(数字,表示列间距),默认值为normal,浏览器会自适应
+        column-rule:column-rule是CSS3中用于设置多列布局中列间分隔线的属性
+        column-span:设置文本的列跨度,值为number(数字,表示列跨度),默认值为1,all(所有列),none(不跨列)
+        column-fill:用于控制多列布局中内容如何填充每一列,值为auto(自动,每列可以不同高度),balance(平衡,每列高度相同),auto(自动),balance(平衡),默认值为auto
+        column-break-before:它决定了一个元素是否应该在新的列中开始。
+        column-break-after:用于控制元素后的分列行为。它决定了元素后是否应该强制断列或避免断列。
+        column-break-inside:它决定了一个元素是否可以被分割到不同的列中。
+
+        使多列布局时,它会尽量保持列的最高的列数量最多原则
+
 
 
 
